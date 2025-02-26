@@ -1,0 +1,18 @@
+{
+  "id": "%%PROJECTID%%",
+  "require": {
+    "net": %%REQUIRENET%%,
+    "debug": %%REQUIREDEBUG%%
+  },
+  "i18n": {
+    "title": {
+      "en": "%%PROJECTTITLE%%"
+    },
+    "summary": {
+      "en": "%%PROJECTSUMMARY%%"
+    },
+    "stub_content": {
+      "en": "Content goes here"
+    }
+  }
+}

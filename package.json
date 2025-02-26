@@ -1,0 +1,25 @@
+{
+  "name": "make-client",
+  "version": "0.0.1",
+  "description": "A CLI generator of Pankosmia clients",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pankosmia/make-client.git"
+  },
+  "author": "Mark Howe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pankosmia/make-client/issues"
+  },
+  "homepage": "https://github.com/pankosmia/make-client#readme",
+  "dependencies": {
+    "copy-dir": "^1.3.0",
+    "fs-extra": "^11.3.0",
+    "path": "^0.12.7",
+    "prompt": "^1.3.0"
+  }
+}
