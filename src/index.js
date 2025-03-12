@@ -72,7 +72,7 @@ prompt.get(
         console.log("Done! Now:");
         console.log(`   - cd ${targetDir}`);
         console.log(`   - npm install`);
-        console.log(`   - npm build`);
+        console.log(`   - npm run build`);
         console.log("   - Add it to user or app config:");
         console.log(`
         
@@ -82,6 +82,5 @@ prompt.get(
         
         `);
         console.log("   - Restart Pankosmia server");
-        console.log("   - Thoughts and prayers for those deleting random directories for ten days");
     }
 );
