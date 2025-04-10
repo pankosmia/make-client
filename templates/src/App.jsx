@@ -7,7 +7,7 @@ function App() {
   const handleWindowResize = useCallback(event => {
     setMaxWindowHeight(window.innerHeight - 64);
   }, []);
-  const i18n = useContext(i18nContext);
+  const {i18nRef} = useContext(i18nContext);
 
   useEffect(() => {
     window.addEventListener('resize', handleWindowResize);
@@ -18,7 +18,7 @@ function App() {
 
   return <Grid2 container spacing={2} sx={{ maxHeight: maxWindowHeight }}>
       <Grid2 size={12}>
-          <h1>{doI18n("pages:%%PROJECTID%%:stub_content", i18n)}</h1>
+          <h1>{doI18n("pages:%%PROJECTID%%:stub_content", i18nRef.current)}</h1>
       </Grid2>
   </Grid2>
 }
