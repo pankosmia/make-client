@@ -14,12 +14,12 @@ const filesToSubstitute = [
 
 const schema = {
     properties: {
-        parentDir: {
+        relativeParentDir: {
             required: true
         },
         projectId: {
             pattern: /^[a-zA-Z][a-zA-Z0-9\-]+[a-zA-Z0-9]$/,
-            message: "Project ID must start with a letter and contain only numbers, letters (A-z) and dashes",
+            message: "Project ID must start with a letter, be at least two characters long and contain only numbers, letters (A-z) and dashes",
             required: true
         },
         projectTitle: {
@@ -46,9 +46,9 @@ prompt.start();
 prompt.get(
     schema,
     function (err, result) {
-        const parentDir = path.resolve(result.parentDir);
+        const parentDir = path.resolve(result.relativeParentDir);
         if (!fse.pathExistsSync(parentDir)) {
-            throw new Error(`Parent dir '{parentDir}' does not exist`);
+            throw new Error(`Parent dir '${parentDir}' does not exist`);
         }
         const targetDir = path.join(parentDir, result.projectId);
         if (fse.pathExistsSync(targetDir)) {
